@@ -7,7 +7,7 @@ const ResCategory=({Data, itemShow, setShowIndex})=>{
     }
     return (
         <div>
-            <div className="w-6/12 mx-auto my-4 bg-gray-200 shadow-xl p-4 rounded-lg">
+            <div className="w-6/12 mx-auto my-4 shadow-xl p-4 rounded-lg">
                 <div className="flex justify-between cursor-pointer" onClick={handleClick}>
                     <span className="font-bold text-lg">{Data.title} ({Data.itemCards.length})</span>
                     <span>⬇</span>

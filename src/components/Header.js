@@ -11,19 +11,19 @@ const Header=()=>{
     const {loggedInUser}=useContext(UserContext);
     const cartItems=useSelector((store)=>store.cart.items);
     return (
-    <div className="flex justify-between bg-pink-100 shadow-lg">
+    <div className="flex justify-between bg-gray-500 shadow-lg">
         <div className="">
-            <img className="w-56" src={LOGO_URL} />
+            <img className="w-56" src={LOGO_URL}/>
         </div>
         <div className="flex items-center">
-            <ul className="flex p-4 m-4">
+            <ul className="flex p-4 m-4 font-bold text-lg text-white">
                 <li className="px-4"> <Link to="/">Home</Link></li>
                 <li className="px-4"><Link to="/about">About Us</Link></li>
                 <li className="px-4"><Link to="/contact">Contact Us</Link></li>
                 <li className="px-4"><Link to={"/cart"}>Cart-({cartItems.length} items)</Link></li>
                 <li className="px-4"><Link to="/grocery">Grocery</Link></li>
                 <li className="px-4">Status:{onlineStatus ? "🟢":"🔴"}</li>
-                <button className="px-4 rounded-lg bg-gray-200" onClick={()=>{
+                <button className="px-4 rounded-lg bg-gray-200 text-black" onClick={()=>{
                    setbtnName("Logout");
                 }}>{btnName}</button>
                 <li className="px-4 font-bold">{loggedInUser}</li>

@@ -12,6 +12,7 @@ import UserContext from "./utilities/UserContext";
 import appStore from "./utilities/appStore";
 import { Provider } from "react-redux";
 import Cart from "./components/Cart";
+import GroceryMenu from "./components/GroceryMenu";
 // import Grocery from "./components/Grocery";
 const Grocery=lazy(()=> import("./components/Grocery"));
 const AppLayout=()=>{
@@ -64,10 +65,13 @@ const appRouter=createBrowserRouter([
     {
         path:'/cart',
         element:<Cart/>
+    },
+    {
+        path:'/grocery/:catName',
+        element:<GroceryMenu/>
     }
 ]
     }
-    
 ])
 const root=ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter} /> );

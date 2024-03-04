@@ -33,7 +33,7 @@ const Body=()=>{
         <div className="body">
             <div className="filter flex">
             <div className="search p-4 m-4">
-                <input type="text" className="search-box p-1 bg-red-50 border border-solid border-black" data-testid="searchInput" value={searchText} onChange={(e)=>{
+                <input type="text" className="search-box p-1 bg-gray-500 text-white border border-solid border-black" data-testid="searchInput" value={searchText} onChange={(e)=>{
                     setsearchText(e.target.value);
                 }}
                 />
@@ -51,7 +51,8 @@ const Body=()=>{
             </div>
             </div>
             <div className="flex flex-wrap justify-between">
-                {nameFilter.map((restaurant)=>(
+                {nameFilter.map((restaurant)=>
+                (
                     <Link key={restaurant.info.id} to={"/restaurant/"+restaurant.info.id}>
                     {/* {restaurant.info.promoted ? (<ResCardPromoted resData={restaurant}/>):(<ResCard  resData={restaurant}/>)} */}
                     <ResCard  resData={restaurant}/></Link>))}
